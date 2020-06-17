@@ -1,5 +1,5 @@
 //Construct for letters
-function letter(value) {
+function Letter(value) {
     this.letter = value;
     this.guessed = false;
 
@@ -28,4 +28,4 @@ function letter(value) {
 };
 
 // Exports the letter constructor to be used in word.js
-module.exports = letter;
+module.exports = Letter;
