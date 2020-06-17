@@ -19,4 +19,13 @@ function letter(value) {
         }
     };
 
-}
+    //Checks if the user input is the same as the letter
+    this.guess = function(guess) {
+        if (guess === this.letter) {
+            this.guessed = true;
+        }
+    };
+};
+
+// Exports the letter constructor to be used in word.js
+module.exports = letter;
