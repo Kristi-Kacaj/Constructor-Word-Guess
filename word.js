@@ -15,9 +15,19 @@ function word(answer) {
     //Log function to display data in terminal
     this.log = function() {
         answerLog = "";
+
         for (var i = 0; i < this.objectArray.length; i++) {
             answerLog += this.objectArray[i] + " ";
         };
+
         console.log(answerLog + "\n");
     };
+
+    //Function takes a character as an argument and calls the guess function on each letter object
+    this.userGuess = function(input) {
+        for (var i = 0; i < this.objectArray.length; i++) {
+            this.objectArray[i].guess(input);
+        };
+    };
 };
+module.exports = word;
