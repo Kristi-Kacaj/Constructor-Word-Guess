@@ -11,7 +11,7 @@ let wordBank = [
     "venus",
     "mars",
     "jupiter",
-    "saturn"
+    "saturn",
     "uranus",
     "neptune",
     "pluto",
@@ -72,6 +72,15 @@ function Logic() {
                         compWord.userGuess(input.userinput);
                         
                         compWord.objectArray.forEach(wordCheck);
+                        if (wordCheckArray.join("") === completeWord.join("")) {
+                            console.log("\nIncorrect\n");
+
+                            incorrectLetters.push(input.userinput);
+                            guessesLeft--;
+                        } else {
+                            console.log("\nCorrect\n");
+                            correctLetters.push(input.userinput);
+                        };
                     };
                 };
             });
