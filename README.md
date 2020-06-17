@@ -8,18 +8,18 @@ A command-line word guessing game that was created using constructors.
 
 - The game will then print out a series of underscores to represent the movie title to be guessed and ask you to "Guess a letter:"
 
-![](images/start-game.png)
+![](images/start-game.PNG)
 
 - The game will only accept inputs of the alphabet that has not already been guessed:
 
-![](images/input-validation.png)
+![](images/input-validation.PNG)
 
 - The game will alert whether your guess was correct or incorrect
     - You can make 10 incorrect guesses before the game is over
 
 - When the word is guessed or when you run out of guesses, the game will ask if you want to play again or exit:
 
-![](images/you-win.png)
+![](images/you-win.PNG)
 
 ## Laguages and Technology Used:
 - Javascript
