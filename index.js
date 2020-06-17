@@ -112,3 +112,28 @@ function Logic() {
     };
 };
 
+//Function prompts user to "play again" or "exit" 
+function restartGame() {
+    inquirer
+        .prompt([
+            {
+                type: "list",
+                message: "Would you like to:",
+                choices: ["play Again", "Exit"],
+                name: "restart"
+            }
+        ]).then(function(input) {
+            if (input.restart === "Play Again") {
+                requireNewWord = true;
+                incorrectLetters = [];
+                correctLetters = [];
+                guessesLeft = 10;
+                Logic();
+            } else {
+                return;
+            };
+        });
+};
+
+//Calls Logic function
+Logic();
