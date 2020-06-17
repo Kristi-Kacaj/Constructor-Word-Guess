@@ -81,8 +81,34 @@ function Logic() {
                             console.log("\nCorrect\n");
                             correctLetters.push(input.userinput);
                         };
+
+                        compWord.log();
+                        //Shows guesses left in terminal
+                        console.log("Guesses Left: " + guessesLeft + "\n");
+                        //Shows letters guessed in terminal
+                        console.log("Letters Guessed: " + incorrectLetters.join(" ") + "\n");
+                        
+                        //If users out of guesses, it'll console.log "Sorry you lost" and call restartGame function
+                        if (guessesLeft > 0) {
+                            Logic();
+                        } else {
+                            console.log("Sorry, you lost!\n");
+                            restartGame ();
+                        };
+
+                        function wordCheck(key) {
+                            wordCheckArray.push(key.guessed);
+                        };
                     };
                 };
             });
+    } else {
+        console.log("You won!\n");
+        restartGame();
+    };
+
+    function completeCheck(key) {
+        completeWord.push(key.guessed);
     };
 };
+
