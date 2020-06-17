@@ -47,7 +47,7 @@ function Logic() {
             .prompt([
                 {
                     type: "input",
-                    message: "Guess a letter from A-Z!",
+                    message: "Guess a letter:",
                     name: "userinput"
                 }
             ]).then(function(input) {
@@ -58,8 +58,22 @@ function Logic() {
                     console.log("\nPlease try again!\n");
                     Logic();
                 } else {
-                
-                }   
-            }); 
-    }
+                    //If statement handles the guesses
+                    if (
+                        incorrectLetters.includes(input.userinput) ||
+                        correctLetters.includes(input.userinput) ||
+                        input.userinput === ""
+                    ) {
+                        console.log("\nAlready Guessed or Nothing Entered\n");
+                        Logic();
+                    //Checks if the word is guessed correctly
+                    } else {
+                        let wordCheckArray = [];
+                        compWord.userGuess(input.userinput);
+                        
+                        compWord.objectArray.forEach(wordCheck);
+                    };
+                };
+            });
+    };
 };
